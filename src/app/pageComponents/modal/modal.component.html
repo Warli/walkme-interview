@@ -1,1 +1,11 @@
-<p>modal works!</p>
+<h1 mat-dialog-title>{{data.mode}} Row</h1>
+<div mat-dialog-content>
+  <mat-form-field *ngFor="let col of data.columns">
+    <span>{{col}}:</span>
+    <input matInput placeholder="{{data.row[col]}}" [(ngModel)]="data.row[col]">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button [mat-dialog-close]="data.row" cdkFocusInitial>Ok</button>
+</div>

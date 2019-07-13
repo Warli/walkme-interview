@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { MatTableModule, MatSidenavModule } from '@angular/material';
 import { NoopAnimationsModule, BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +13,8 @@ import { StudentComponent } from './pages/student/student.component';
 import { TableComponent } from './pageComponents/table/table.component';
 import { ModalComponent } from './pageComponents/modal/modal.component';
 import { Routes, RouterModule } from '@angular/router';
+import {MatDialogModule} from '@angular/material/dialog';
+import { MatInputModule } from '@angular/material';
 
 const appRoutes: Routes = [
   {path: 'students', component: StudentComponent},
@@ -38,8 +41,12 @@ const appRoutes: Routes = [
     MatTableModule,
     MatSidenavModule,
     BrowserAnimationsModule,
-    NoopAnimationsModule
+    NoopAnimationsModule,
+    MatDialogModule,
+    FormsModule,
+    MatInputModule
   ],
+  entryComponents: [ModalComponent],
   providers: [],
   bootstrap: [AppComponent]
 })
