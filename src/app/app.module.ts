@@ -15,6 +15,8 @@ import { ModalComponent } from './pageComponents/modal/modal.component';
 import { Routes, RouterModule } from '@angular/router';
 import {MatDialogModule} from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material';
+import {MatButtonModule} from '@angular/material/button';
+import { AngularMultiSelectModule } from 'angular2-multiselect-dropdown';
 
 const appRoutes: Routes = [
   {path: 'students', component: StudentComponent},
@@ -44,7 +46,9 @@ const appRoutes: Routes = [
     NoopAnimationsModule,
     MatDialogModule,
     FormsModule,
-    MatInputModule
+    MatInputModule,
+    MatButtonModule,
+    AngularMultiSelectModule
   ],
   entryComponents: [ModalComponent],
   providers: [],

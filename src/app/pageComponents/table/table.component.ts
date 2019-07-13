@@ -63,10 +63,11 @@ export class TableComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-      timer(0).subscribe(() => {
-        this.dataSource.data = this.dataSource.data.concat(result);
-      });
+      if (result.Id) {
+        timer(0).subscribe(() => {
+          this.dataSource.data = this.dataSource.data.concat(result);
+        });
+      }
     });
   }
 

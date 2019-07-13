@@ -1,4 +1,4 @@
-<button (click)="createRow()">Create Row</button>
+<button mat-button (click)="createRow()">Create Row</button>
 <table mat-table [dataSource]="dataSource.data" class="mat-elevation-z8">
     <ng-container *ngFor="let col of columns" matColumnDef="{{col}}">
         <th mat-header-cell *matHeaderCellDef> {{col}} </th>

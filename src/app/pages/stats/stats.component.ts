@@ -1,3 +1,4 @@
+import { DataService } from './../../service/data.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,37 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StatsComponent implements OnInit {
 
-  constructor() { }
+  average = {};
+  coursesList = [];
+  selectedCourses = [];
+  coursesDropdownSettings = {
+    singleSelection: false,
+    text: 'Select Courses',
+    selectAllText: 'Select All',
+    unSelectAllText: 'UnSelect All',
+    enableSearchFilter: true,
+  };
+
+  studentsList = [];
+  selectedStudents = [];
+  studentsDropdownSettings = {
+    singleSelection: false,
+    text: 'Select Students',
+    selectAllText: 'Select All',
+    unSelectAllText: 'UnSelect All',
+    enableSearchFilter: true,
+  };
+
+  constructor(
+    private dataService: DataService
+  ) { }
 
   ngOnInit() {
+    this.dataService.get_data().subscribe(
+      (data) => {
+        data
+      }
+    )
   }
 
 }
