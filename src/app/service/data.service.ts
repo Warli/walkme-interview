@@ -1,9 +1,16 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
+
+  get_data() {
+    const DATA_URL = 'https://my-json-server.typicode.com/YonatanKra/demoStudentsServer/data';
+
+    return this.http.get(DATA_URL);
+  }
 }
