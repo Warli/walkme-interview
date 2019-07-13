@@ -48,12 +48,11 @@ export class StudentComponent implements OnInit {
                     grades.length,
                     average / courseWithGradeCounter
                   ));
-              }
-            )
-          }
-        )
-      }
-    )
+              });
+
+              console.log(this.students);
+          });
+      });
   }
 
 }
