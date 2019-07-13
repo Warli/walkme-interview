@@ -1,14 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { MatTableDataSource } from '@angular/material';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
-import {take} from 'rxjs/operators';
-import { ViewChild } from '@angular/core';
-import { MatSort } from '@angular/material';
-import { MatPaginator } from '@angular/material';
-import { TableDataSource } from './table-datasource';
 import { timer } from 'rxjs';
 import { ModalComponent } from '../modal/modal.component';
-import { Course } from 'src/app/class/course';
 
 @Component({
   selector: 'app-table',

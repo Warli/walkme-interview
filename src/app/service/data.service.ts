@@ -9,7 +9,7 @@ export class DataService {
   constructor(private http: HttpClient) { }
 
   get_data() {
-    const DATA_URL = 'https://my-json-server.typicode.com/YonatanKra/demoStudentsServer/data';
+    const DATA_URL = 'https://my-json-server.typicode.com/YonatanKra/demoStudentsServer/db';
 
     return this.http.get(DATA_URL);
   }

@@ -1,22 +1,23 @@
 <div class="content">
-  <angular2-multiselect class="select-coureses" [data]="dropdownList" [(ngModel)]="selectedItems"
+  <angular2-multiselect class="select-coureses" [data]="coursesList" [(ngModel)]="selectedCourses"
     [settings]="coursesDropdownSettings">
     Select Coureses
   </angular2-multiselect>
-  <angular2-multiselect class="select-coureses" [data]="dropdownList" [(ngModel)]="selectedItems"
+  <angular2-multiselect class="select-coureses" [data]="studentsList" [(ngModel)]="selectedStudents"
     [settings]="studentsDropdownSettings">
     Select Coureses
   </angular2-multiselect>
-  <button>Calculate</button>
+  <button (click)="calculate()">Calculate</button>
 
-  <div class="calculated-value" *ngIf="average.total">
+
+  <div class="calculated-value" *ngIf="calcualted">
     <span class="results">Results:</span>
     <div class="course" *ngFor="let course of selectedCourses">
-      {{ average[course] }}
+        {{ course.name }}: {{ average[course.ID] }}
     </div>
 
     <div class="total">
-        Total: {{ average.total }}
+        Total: {{ average.avg }}
       </div>
   </div>
 </div>
