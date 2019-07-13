@@ -10,7 +10,7 @@ import { MarksService } from 'src/app/service/marks.service';
 })
 export class StudentComponent implements OnInit {
   students: Student[] = [];
-  studentsColumns: string[] = ['Id', 'First Name', 'Last Name', 'Number of courses', 'Average mark'];
+  studentsColumns: string[] = ['Id', 'firstname', 'lastname', 'numberCourses', 'average'];
 
   constructor(
     private studentSerivce: StudentService,
@@ -50,7 +50,7 @@ export class StudentComponent implements OnInit {
                   ));
               });
 
-              console.log(this.students);
+            console.log(this.students);
           });
       });
   }

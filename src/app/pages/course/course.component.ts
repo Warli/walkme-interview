@@ -10,7 +10,7 @@ import { MarksService } from 'src/app/service/marks.service';
 })
 export class CourseComponent implements OnInit {
   courses: Course[] = [];
-  coursesColumns: string[] = ['Id', 'Course name', 'Number of students', 'Averga mark'];
+  coursesColumns: string[] = ['Id', 'courseName', 'studentCount', 'averageGrade'];
 
   constructor(
     private courseService: CourseService,
