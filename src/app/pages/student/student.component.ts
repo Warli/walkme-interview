@@ -19,9 +19,9 @@ export class StudentComponent implements OnInit {
 
   ngOnInit() {
     this.studentSerivce.get_students().subscribe(
-      (studentsObj) => {
+      (studentsObj: any[]) => {
         this.marksService.get_marks().subscribe(
-          (marksObj) => {
+          (marksObj: any[]) => {
             studentsObj.forEach(
               (studentObj) => {
                 const grades: number[] = [];

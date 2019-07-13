@@ -19,9 +19,9 @@ export class CourseComponent implements OnInit {
 
   ngOnInit() {
     this.courseService.get_courses().subscribe(
-      (coursesObj) => {
+      (coursesObj: any[]) => {
         this.marksSerivce.get_marks().subscribe(
-          (marksObj) => {
+          (marksObj: any[]) => {
             coursesObj.forEach(
               (courseObj) => {
                 let studentsCount = 0;
