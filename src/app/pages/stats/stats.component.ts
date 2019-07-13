@@ -63,21 +63,6 @@ export class StatsComponent implements OnInit {
       });
   }
 
-  onItemSelect(item:any){
-    console.log(item);
-    console.log(this.selectedCourses);
-}
-OnItemDeSelect(item:any){
-    console.log(item);
-    console.log(this.selectedCourses);
-}
-onSelectAll(items: any){
-    console.log(items);
-}
-onDeSelectAll(items: any){
-    console.log(items);
-}
-
   calculate() {
     this.average.total = 0;
     this.average.countTotal = 0;
